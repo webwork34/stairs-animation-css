@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>stairs</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		.box{
+			margin: 50px;
+			width: 598px;
+			height: 651px;
+			border: 1px solid black;
+			user-select: none;
+			position: relative;
+			display: flex;
+			align-items: flex-end;
+		}
+		.div{
+			width: 100px;
+			margin-right: 20px;
+			/*border: 1px solid red;*/
+			background: red;
+			margin-top: 150px;
+		}
+		.div1{
+			height: 100px;
+		}
+		.div2{
+			height: 200px;
+		}
+		.div3{
+			height: 300px;
+		}
+		.div4{
+			height: 400px;
+		}
+		.div5{
+			height: 500px;
+		}
+		.div:last-of-type{
+			margin-right: 0;
+		}
+		.circle{
+			width: 100px;
+			height: 100px;
+			/*border: 1px solid green;*/
+			background: green;
+			border-radius: 50%;
+			position: absolute;
+			top: 450px;
+			left: 0;
+		}
+		.box:hover .circle{
+			animation-name: jump_v, jump_g;
+			animation-delay: 0s, 0.5s;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+
+		}
+		.box:hover .div1{
+			animation-name: div1;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+
+		}
+		.box:hover .div2{
+			animation-name: div2;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+
+		}
+		.box:hover .div4{
+			animation-name: div4;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+
+		}
+		.box:hover .div5{
+			animation-name: div5;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+
+		}
+		@keyframes div1{
+			0% {height: 100px;}
+			50% {height: 100px;}
+			51% {height: 500px;}
+			99% {height: 500px;}
+			100%{height: 100px;}
+		}
+		@keyframes div2{
+			0% {height: 200px;}
+			50% {height: 200px;}
+			51% {height: 400px;}
+			99% {height: 400px;}
+			100%{height: 200px;}
+		}
+		@keyframes div4{
+			0% {height: 400px;}
+			50% {height: 400px;}
+			51% {height: 200px;}
+			99% {height: 200px;}
+			100%{height: 400px;}
+		}
+		@keyframes div5{
+			0% {height: 500px;}
+			50% {height: 500px;}
+			51% {height: 100px;}
+			99% {height: 100px;}
+			100%{height: 500px;}
+		}
+		@keyframes jump_v{
+			0%{top: 450px;}
+			12.5%{top: 350px;}
+			25%{top: 250px;}
+			37.5%{top: 150px;}
+			50%{top: 50px;}
+			51%{top: 450px;}
+			62.5%{top: 350px;}
+			75%{top: 250px;}
+			87.5%{top: 150px;}
+			100%{top: 50px;}
+		}
+		@keyframes jump_g{
+			0%{left: 0;}
+			12.5%{left: 120px;}
+			25%{left: 240px;}
+			37.5%{left: 360px;}
+			50%{left: 480px;}
+			51%{left: 480px;}
+			62.5%{left: 360px;}
+			75%{left: 240px;}
+			87.5%{left: 120px;}
+			100%{left: 0px;}
+		}
+	</style>
+</head>
+<body>
+
+	<div class="box">
+		<div class="circle"></div>
+		<div class="div div1"></div>
+		<div class="div div2"></div>
+		<div class="div div3"></div>
+		<div class="div div4"></div>
+		<div class="div div5"></div>
+	</div>	
+
+</body>
+</html>
